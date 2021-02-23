@@ -1,4 +1,5 @@
-import '../styles/globals.css'
+//Aqui fica salvo tudo que vai repetir em todas as paginas
+import '../styles/global.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
