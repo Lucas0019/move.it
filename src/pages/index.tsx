@@ -1,34 +1,35 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import { CompletedChallenges } from "../Components/CompletedChallenges";
-import { Countdown } from "../Components/Countdown";
-import { ExperienceBar } from "../Components/ExperienceBar";
-import { Profile } from '../Components/Profile';
-import { ChallengeBox } from "../Components/ChallengeBox";
+import { CompletedChallenges } from '../components/CompletedChallenges'
+import { ExperienceBar } from '../components/ExperienceBar'
+import { ChallengeBox } from '../components/ChallengeBox'
+import { Countdown } from '../components/Countdown'
+import { Profile } from '../components/Profile'
 
 import styles from '../styles/pages/Home.module.css'
+import { CountdownProvider } from '../contexts/CountdownContext'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-
       <Head>
-        <title>Inicio | move.it</title>
+        <title>Início | move.it</title>
       </Head>
 
-      <ExperienceBar/>
+      <ExperienceBar />
 
-      <section>
-        <div>
-          <Profile/>
-          <CompletedChallenges/>
-          <Countdown />
-        </div>
-        
-        <div>
-          <ChallengeBox />
-        </div>
-      </section>
+      <CountdownProvider>
+        <section>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />
+          </div>
+          <div>
+            <ChallengeBox />
+          </div>
+        </section>
+      </CountdownProvider>
     </div>
   )
 }
