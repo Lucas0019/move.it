@@ -1,12 +1,13 @@
 .profileContainer {
   display: flex;
   align-items: center;
+  margin-top: 4em;
 }
 
 .profileContainer > img {
   width: 5.5rem;
   height: 5.5rem;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 .profileContainer div {
